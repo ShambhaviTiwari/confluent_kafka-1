@@ -1,4 +1,17 @@
 1.) MySQL Table (Table should have some column like created_at or updated_at so that can be used for incremental read)
+create table db.delivery (
+id int,
+date_order date,
+items varchar(50) ,
+created_at datetime
+);
+
+insert into db.delivery values (1,'2023-04-04', 'Pav Bhaji','2023-04-04 16:00:00');
+insert into db.delivery values (2,'2023-04-04','Panipuri','2023-04-04 16:10:00');
+insert into db.delivery values (3,'2023-04-04','Chole Bhature','2023-04-04 16:11:00');
+insert into db.delivery values (4,'2023-04-04','Sushi','2023-04-04 16:20:00');
+insert into db.delivery values (5,'2023-04-04','Noodles','2023-04-04 16:25:00');
+insert into db.delivery values (6,'2023-04-04','Biryani','2023-04-04 16:30:00');
 2.) Write a python script which is running in infinite loop and inserting 4-5 dummy/dynamically prepared records
     in MySQL Table
 3.) Setup Confluent Kafka
